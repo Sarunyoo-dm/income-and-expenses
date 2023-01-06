@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+:root{
+    --box-shadow: 0 1px 3px rgba(0,0,0,0.15)
+
+
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    min-height: 100vh;
+}
+.container{
+    margin: 30px auto;
+    width: 350px;
+    border: 2px solid black;
+    box-shadow: var(--box-shadow);
+    padding: 10px 20px;
+    background-color: skyblue;
+}
+h1{
+    letter-spacing: 1px;
+    margin: 0;
+}
+h3{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin: 30px 0 10px;
+}
+h4{
+    margin: 0;
+}
+.income-expense-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px 5px 20px;
+    margin: 20px 0;
+}
+.income-expense-container>div{
+    flex: 1;
+    text-align: center;
+}
+.income-expense-container>div:first-of-type{
+    border-right: 1px solid #dedede;
+}
+.money.plus{
+    color: #2ecc71;
+    font-weight: bold;
+}
+.money.minus{
+    color: red;
+    font-weight: bold;
+}
+label{
+    display: inline-block;
+    margin: 10px 0;
+}
+input[type="text"],input[type="number"]{
+    border: 1px solid #dedede;
+    display: block;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+}
+.btn{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: var(--box-shadow);
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.list li{
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+.list li.plus{
+    border-right: 5px solid #2ecc71;
+}
+.list li.minus{
+    border-right: 5px solid red;
+}
+.delete-btn{
+    cursor: pointer;
+    background-color: red;
+    color: #fff;
+    border: 0;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-130%,-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.list li:hover .delete-btn{
+    opacity: 1;
+}
+.btn:focus,.delete-btn:focus{
+    outline: 0;
+}
